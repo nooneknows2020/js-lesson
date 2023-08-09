@@ -10,6 +10,7 @@
 - lesson6:モジュールを動的に読み込む→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson6/)
 
 ※コンソールを確認すること。
+
 ※モジュールを読み込む際は、ローカルサーバーを起動して確認すること。
 
 ### lesson1:モジュールの読み込みの基本
@@ -84,7 +85,7 @@ export { name, param, print };
 export { name, param, print };
 ```
 
-## lesson3:モジュール全体をオブジェクトとしてインポートする
+### lesson3:モジュール全体をオブジェクトとしてインポートする
 
 ```javascript
 // main.js

@@ -5,7 +5,8 @@
 - lesson1:モジュールの読み込みの基本→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson1/)
 - lesson2:インポート時の名前の変更(衝突回避)→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson2/)
 - lesson3:モジュール全体をオブジェクトとしてインポートする→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson3/)
-- lesson4:クラスをインポートする[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson4/)
+- lesson4:クラスをインポートする→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson4/)
+- lesson5:モジュールの集約→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson5/)
 
 ※コンソールを確認すること
 
@@ -122,6 +123,64 @@ export { Square };
 
 ```javascript
 // square.js
+// エクスポート側
+// クラスをエクスポートする
+export { Circle };
+```
+
+### lesson5:モジュールの集約
+
+複数のモジュールを親モジュールに集約する。
+
+#### ファイル構造
+
+- index.html
+- main.js
+- modules/
+    - shapes.js
+    - shapes/
+        - square.js
+        - circle.js
+
+#### ファイルの役割
+
+- index.html
+    - main.jsを読み込む
+- main.js
+    - modules配下のモジュールを読み込む
+    - 処理の実行
+- shapes.js
+    - モジュールを集約する
+    - モジュールをまとめてエクスポートする
+- square.js
+    - 長方形に関する変数や関数の定義
+- circle.js
+    - 円に関する変数や関数の定義
+
+```javascript
+// main.js
+// インポート側
+// モジュールの集約
+import { Square, Circle } from './modules/shapes.js';
+```
+
+```javascript
+// shapes.js
+// エクスポート側
+// モジュールをまとめてエクスポートする
+export { Square } from './shapes/square.js';
+export { Circle } from './shapes/circle.js';
+```
+
+```javascript
+// square.js
+// エクスポート側
+// クラスをエクスポートする
+export { Square };
+```
+
+```javascript
+// circle.js
 // エクスポート側
 // クラスをエクスポートする
 export { Circle };

@@ -4,6 +4,7 @@
 
 - lesson1:モジュールの読み込みの基本→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson1/)
 - lesson2:インポート時の名前の変更(衝突回避)→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson2/)
+- lesson3:モジュール全体をオブジェクトそしてインポートする→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson3/)
 
 ※コンソールを確認すること
 
@@ -28,6 +29,12 @@
     - 長方形に関する変数や関数の定義
 - circle.js
     - 円に関する変数や関数の定義
+
+```html
+<!-- index.html -->
+<!-- スクリプトファイルにtype="module"を指定する -->
+<script type="module" src="./main.js"></script>
+```
 
 ```javascript
 // インポート側
@@ -57,6 +64,27 @@ import { name as squareName,
 import { name as circleName,
         param as circleParam,
         print as circlePrint  } from './modules/circle.js';
+```
+
+```javascript
+// square.js
+// エクスポート側
+export { name, param, print };
+```
+
+```javascript
+// circle.js
+// エクスポート側
+export { name, param, print };
+```
+
+## lesson3:モジュール全体をオブジェクトそしてインポートする
+
+```javascript
+// インポート側
+// モジュール全体をオブジェクトそしてインポートする
+import * as Square from './modules/square.js';
+import * as Circle from './modules/circle.js';
 ```
 
 ```javascript

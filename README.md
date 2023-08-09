@@ -248,7 +248,6 @@ squareBtn.addEventListener('click', () => {
         let square = new Module.Square(10, 10, 100, 100, colors.blue);
         console.log(square.print());
     });
-    // console.log(squareBtn);
 });
 ```
 

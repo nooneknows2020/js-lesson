@@ -8,6 +8,7 @@
 - lesson4:クラスをインポートする→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson4/)
 - lesson5:モジュールの集約→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson5/)
 - lesson6:モジュールを動的に読み込む→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson6/)
+- lesson7:await→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson7/)
 
 ※コンソールを確認すること。
 
@@ -201,6 +202,75 @@ squareBtn.addEventListener('click', () => {
         console.log(square.print());
     });
 });
+```
+
+### lesson7:await
+
+#### ファイル構造
+
+- index.html
+- main.js
+- modules/
+    - square.js
+    - circle.js
+    - getColors.js
+- data/
+    - colors.js
+
+#### ファイルの役割
+
+- index.html
+    - main.jsを読み込む
+- main.js
+    - modules配下のモジュールを読み込む
+    - 処理の実行
+- square.js
+    - 長方形に関する変数や関数の定義
+- circle.js
+    - 円に関する変数や関数の定義
+- getColors.js
+    - jsonデータを取得する
+- colors.js
+    - カラーコードをjson形式のデータで定義する
+
+
+
+```javascript
+// main.js
+// インポート側
+import colors from './modules/getColors.js';
+
+...
+
+//ボタンをクリックしたときの処理
+squareBtn.addEventListener('click', () => {
+    import('./modules/square.js').then((Module) => {
+        let square = new Module.Square(10, 10, 100, 100, colors.blue);
+        console.log(square.print());
+    });
+    // console.log(squareBtn);
+});
+```
+
+```javascript
+// getColors.js
+// fetch request
+const colors = fetch('./data/colors.json')
+    .then(response => response.json());
+
+export default await colors;
+```
+
+```
+// colors.json
+// json形式のカラーコード
+{
+    "yellow": "#F4D03F",
+    "green": "#52BE80",
+    "blue": "#5499C7",
+    "red": "#CD6155",
+    "orange": "#F39C12"
+}
 ```
 
 ## 参考サイト

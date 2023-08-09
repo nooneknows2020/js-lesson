@@ -160,7 +160,7 @@ export { Circle };
 ```javascript
 // main.js
 // インポート側
-// モジュールの集約
+// モジュールをまとめて読み込む
 import { Square, Circle } from './modules/shapes.js';
 ```
 

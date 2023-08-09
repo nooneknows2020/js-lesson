@@ -7,8 +7,10 @@
 - lesson3:モジュール全体をオブジェクトとしてインポートする→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson3/)
 - lesson4:クラスをインポートする→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson4/)
 - lesson5:モジュールの集約→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson5/)
+- lesson6:モジュールを動的に読み込む→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson6/)
 
-※コンソールを確認すること
+※コンソールを確認すること。
+※モジュールを読み込む際は、ローカルサーバーを起動して確認すること。
 
 ### lesson1:モジュールの読み込みの基本
 
@@ -184,6 +186,20 @@ export { Square };
 // エクスポート側
 // クラスをエクスポートする
 export { Circle };
+```
+
+### lesson6:モジュールを動的に読み込む
+
+ex.)ボタンをクリックしたときにモジュールを読み込む。
+
+```javascript
+//ボタンをクリックしたときの処理
+squareBtn.addEventListener('click', () => {
+    import('./modules/square.js').then((Module) => {
+        let square = new Module.Square(10, 10, 100, 100);
+        console.log(square.print());
+    });
+});
 ```
 
 ## 参考サイト

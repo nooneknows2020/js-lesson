@@ -1,4 +1,4 @@
-// モジュール全体をオブジェクトそしてインポートする
+// モジュール全体をオブジェクトとしてインポートする
 import * as Square from './modules/square.js';
 import * as Circle from './modules/circle.js';
 

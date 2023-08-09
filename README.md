@@ -3,7 +3,7 @@
 ## モジュール
 
 - lesson1:モジュールの読み込みの基本→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson1/)
-- lesson2:インポート時の名前の変更(衝突回避)
+- lesson2:インポート時の名前の変更(衝突回避)→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson2/)
 
 ※コンソールを確認すること
 

@@ -5,6 +5,7 @@
 - lesson1:モジュールの読み込みの基本→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson1/)
 - lesson2:インポート時の名前の変更(衝突回避)→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson2/)
 - lesson3:モジュール全体をオブジェクトとしてインポートする→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson3/)
+- lesson4:クラスをインポートする[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson4/)
 
 ※コンソールを確認すること
 
@@ -100,6 +101,30 @@ export { name, param, print };
 // circle.js
 // エクスポート側
 export { name, param, print };
+```
+
+### lesson4:クラスをインポートする
+
+```javascript
+// main.js
+// インポート側
+// クラスをインポートする
+import { Square } from './modules/square.js';
+import { Circle } from './modules/circle.js';
+```
+
+```javascript
+// square.js
+// エクスポート側
+// クラスをエクスポートする
+export { Square };
+```
+
+```javascript
+// square.js
+// エクスポート側
+// クラスをエクスポートする
+export { Circle };
 ```
 
 ## 参考サイト

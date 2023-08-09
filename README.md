@@ -84,12 +84,12 @@ export { name, param, print };
 export { name, param, print };
 ```
 
-## lesson3:モジュール全体をオブジェクトそしてインポートする
+## lesson3:モジュール全体をオブジェクトとしてインポートする
 
 ```javascript
 // main.js
 // インポート側
-// モジュール全体をオブジェクトそしてインポートする
+// モジュール全体をオブジェクトとしてインポートする
 import * as Square from './modules/square.js';
 import * as Circle from './modules/circle.js';
 ```

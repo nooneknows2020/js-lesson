@@ -1,5 +1,8 @@
 # JavaScriptの練習
 
+- モジュール
+- イベントリスナ
+
 ## モジュール
 
 - lesson1:モジュールの読み込みの基本→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson1/)
@@ -271,6 +274,14 @@ export default await colors;
     "orange": "#F39C12"
 }
 ```
+
+## イベントリスナ
+
+- lesson1:イベントリスナの基本→[実行例](https://nooneknows2020.github.io/js-lesson/event-listener/lesson1/)
+
+### lesson1:イベントリスナの基本
+
+後から追加した要素にもイベントリスナを作っておける。
 
 ## 参考サイト
 

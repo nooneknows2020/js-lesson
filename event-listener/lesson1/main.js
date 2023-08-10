@@ -6,7 +6,7 @@ let i = 0;
 document.getElementById('addBtn').addEventListener('click', function(){
     console.log("click add");
     // 編集ボタン、削除ボタン、修正ボタンを作る
-    // <div>
+    // <div data-num="0">
     // <input type="button" class="editBtn" value="編集">
     // <input type="button" class="removeBtn" value="削除">
     // <input type="button" class="fixBtn" value="修正"></input>

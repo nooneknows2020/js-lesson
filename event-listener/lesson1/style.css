@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+#veiw{
+    display:block;
+}
+input{
+    margin: 0 10px 10px 0;
+}
+
+#addBtn{
+   margin: 0 0 10px 0;
+}

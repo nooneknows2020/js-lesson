@@ -13,6 +13,7 @@
 - lesson6:モジュールを動的に読み込む→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson6/)
 - lesson7:await→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson7/)
 - lesson8:キャンバスの例→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson8/)
+- lesson9:lesson8のモジュールをクラスに書き換え→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson9/)
 
 ※コンソールを確認すること。
 
@@ -278,6 +279,10 @@ export default await colors;
 
 キャンバスを使ったモジュールの例。
 
+### lesson9:lesson8のモジュールをクラスに書き換え
+
+ボタンクリックで図形を描画する。図形リストに図形の情報を表示する。
+
 ## イベントリスナ
 
 - lesson1:イベントリスナの基本→[実行例](https://nooneknows2020.github.io/js-lesson/event-listener/lesson1/)
@@ -290,4 +295,3 @@ export default await colors;
 
 - [JavaScript モジュール - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Modules)
 - [js-examples/module-examples at main · mdn/js-examples](https://github.com/mdn/js-examples/tree/main/module-examples)
-

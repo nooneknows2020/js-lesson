@@ -12,6 +12,7 @@
 - lesson5:モジュールの集約→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson5/)
 - lesson6:モジュールを動的に読み込む→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson6/)
 - lesson7:await→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson7/)
+- lesson8:キャンバスの例→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson8/)
 
 ※コンソールを確認すること。
 
@@ -236,8 +237,6 @@ squareBtn.addEventListener('click', () => {
 - colors.js
     - カラーコードをjson形式のデータで定義する
 
-
-
 ```javascript
 // main.js
 // インポート側
@@ -274,6 +273,10 @@ export default await colors;
     "orange": "#F39C12"
 }
 ```
+
+### lesson8:キャンバスの例
+
+キャンバスを使ったモジュールの例。
 
 ## イベントリスナ
 

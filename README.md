@@ -2,6 +2,7 @@
 
 - モジュール
 - イベントリスナ
+- Canvas
 
 ## モジュール
 
@@ -291,7 +292,22 @@ export default await colors;
 
 後から追加した要素にもイベントリスナを作っておける。
 
+## Canvas
+
+- lesson1:キャンバスにおけるイベントリスナの例→[実行例](https://nooneknows2020.github.io/js-lesson/module/lesson10/)
+
+### lesson1:キャンバスにおけるイベントリスナの例
+
+キャンバスにイベントリスナを設定する。
+
 ## 参考サイト
+
+### モジュールの参考サイト
 
 - [JavaScript モジュール - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Modules)
 - [js-examples/module-examples at main · mdn/js-examples](https://github.com/mdn/js-examples/tree/main/module-examples)
+
+### Canvasの参考サイト
+
+- [Element: getBoundingClientRect() メソッド - Web API | MDN](https://developer.mozilla.org/ja/docs/Web/API/Element/getBoundingClientRect)
+- [Canvas上のオブジェクトがクリックされたか検知する|Black Everyday Company](https://kuroeveryday.blogspot.com/2019/04/how-to-detect-click-on-shape-on-canvas.html)

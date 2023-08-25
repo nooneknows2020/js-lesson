@@ -54,15 +54,18 @@ btnCircle.button.addEventListener('click', function(){
     canvas.add(circle);
     // 追加した図形を描画する
     canvas.randomDraw(circle);
+
+    // 図形リストに表示する
+    displayAreaPerimeter(circle);
 });
 
 btnClear.button.addEventListener('click', function(){
     // キャンバスをリセット
     canvas.reset();
-    // // 図形リストを全削除
-    // while(ulElem.firstChild){
-    //     ulElem.removeChild(ulElem.firstChild);
-    // }
+    // 図形リストを全削除
+    while(ulElem.firstChild){
+        ulElem.removeChild(ulElem.firstChild);
+    }
 });
 
 // ブラウザに図形リストを表示する準備

@@ -19,7 +19,6 @@ import { Button } from './modules/button.js';
 import { Square } from './modules/square.js';
 import { Circle } from './modules/circle.js';
 
-
 // キャンバスの生成、document.bodyに追加
 const canvas = new Canvas(480, 320);
 // キャンバスの初期表示
@@ -42,6 +41,9 @@ btnSauare.button.addEventListener('click', function(){
     canvas.add(square);
     // 追加した図形を描画する
     canvas.randomDraw(square);
+
+    // 図形リストに表示する
+    displayAreaPerimeter(square);
 });
 
 btnCircle.button.addEventListener('click', function(){
@@ -63,20 +65,26 @@ btnClear.button.addEventListener('click', function(){
     // }
 });
 
-// // ブラウザ表示用
-// const ulElem = document.getElementById('list');
+// ブラウザに図形リストを表示する準備
+const div = document.createElement("div");
+let html = "<h2>図形リスト</h2>";
+html += '<ul id="list"></ul>';
+div.innerHTML = html;
+document.body.appendChild(div);
 
+// 図形リストの要素を取得する
+const ulElem = document.getElementById('list');
 
-// // 図形の情報をブラウザに表示
-// function displayAreaPerimeter(shape){
-//     const li = document.createElement('li');
-//     let text;
-//     if(shape.type == "SQUARE"){
-//         text = `長方形:面積:${shape.getArea()}px, 外周:${shape.getPerimeter()}px`;       
-//     }else{
-//         text = `円:面積:${shape.getArea()}px, 円周:${shape.getPerimeter()}px`;    
-//     }
+// 図形の情報をブラウザに表示
+function displayAreaPerimeter(shape){
+    const li = document.createElement('li');
+    let text;
+    if(shape.type == "SQUARE"){
+        text = `長方形:面積:${shape.getArea()}px, 外周:${shape.getPerimeter()}px`;       
+    }else{
+        text = `円:面積:${shape.getArea()}px, 円周:${shape.getPerimeter()}px`;    
+    }
 
-//     li.textContent = text;
-//     ulElem.appendChild(li); 
-// }
+    li.textContent = text;
+    ulElem.appendChild(li); 
+}

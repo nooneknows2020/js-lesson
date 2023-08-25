@@ -38,13 +38,17 @@ class Canvas{
 
     // キャンバスに描画されている図形をリセットする
     reset(){
+        // 図形が0個ならば、何も処理しない
+        if(this.shapes.length === 0){
+            return;
+        }
         const ctx = this.canvas.getContext("2d");
         // キャンバスをリセットする
         ctx.reset();
 
         // キャンバスに描画する図形を空にする
         this.shapes = [];
-        console.log(this.shapes.length);
+        // console.log(this.shapes.length);
 
         // キャンバスを初期状態に戻す
         this.init();

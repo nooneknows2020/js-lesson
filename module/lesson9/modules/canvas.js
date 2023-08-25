@@ -29,8 +29,14 @@ class Canvas{
 
     draw(shape){
         const ctx = this.canvas.getContext("2d");
-        console.log(shape);
+        // console.log(shape);
         shape.draw(this.canvas);
+    }
+
+    // ランダムな位置、大きさ、色の図形を描画する
+    randomDraw(shape){
+        const ctx = this.canvas.getContext("2d");
+        shape.randomDraw(this.canvas);
     }
 }
 

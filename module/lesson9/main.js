@@ -17,19 +17,29 @@
 import { Canvas } from './modules/canvas.js';
 import { Square } from './modules/square.js';
 import { Circle } from './modules/circle.js';
+import { Button } from './modules/button.js';
 
 
-// キャンバスの生成
+// キャンバスの生成、document.bodyに追加
 const canvas = new Canvas(480, 320);
 // キャンバスの初期表示
 canvas.init();
 
-// 図形の生成
-const square = new Square();
-// キャンバスに図形を追加する
-canvas.add(square);
-// 追加した図形を描画する
-canvas.draw(square);
+// ボタンクリックで図形をキャンバスに描画する
+// Squareボタンの生成、document.bodyに追加
+const btnSauare = new Button("Square");
+btnSauare.button.addEventListener('click', function(){
+    // 図形を生成し、キャンバスに描画する
+    // 図形の生成
+    const square = new Square();
+    // キャンバスに図形を追加する
+    canvas.add(square);
+    // 追加した図形を描画する
+    // canvas.draw(square);
+    canvas.randomDraw(square);
+})
+// Circleボタンの生成、document.bodyに追加
+// CLEARボタンの生成、document.bodyに追加
 
 
 

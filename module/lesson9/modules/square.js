@@ -17,19 +17,21 @@ class Square{
         _ctx.fillRect(this.x, this.y, this.width, this.height);
     }
 
-    //ランダムな大きさの長方形を作る
-    randomSquare(ctx){
+    //ランダムな位置、大きさ、色の図形を描画する
+    randomDraw(canvas){
         const color1 = random(0, 255);
         const color2 = random(0, 255);
         const color3 = random(0, 255);
         this.color = `rgb(${color1}, ${color2}, ${color3})`;
-        ctx.fillStyle = this.color;
+
+        const _ctx = canvas.getContext("2d");
+        _ctx.fillStyle = this.color;
     
         this.x = random(0, 480);
         this.y = random(0, 320);
         this.width = random(10, 100);
         this.height = random(10, 100);
-        ctx.fillRect(this.x, this.y, this.width, this.height);
+        _ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     
     //図形の面積を求める

@@ -24,6 +24,14 @@ const canvas = new Canvas(480, 320);
 // キャンバスの初期表示
 canvas.init();
 
+// 図形の生成
+const square = new Square();
+// キャンバスに図形を追加する
+canvas.add(square);
+// 追加した図形を描画する
+canvas.draw(square);
+
+
 
 // // ブラウザ表示用
 // const ulElem = document.getElementById('list');

@@ -2,17 +2,19 @@ class Square{
     // コンストラクタ
     constructor(x, y, width, height, color){
         this.type = 'SQUARE';
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-        this.color = color;
+        // 図形のパラメータが指定されていなければ、初期値を以下のように設定する
+        this.x = x || 10;
+        this.y = y || 10;
+        this.width = width || 10;
+        this.height = height || 10;
+        this.color = color || "#333333";
     }
 
     // 図形の描画
-    draw(ctx){
-        ctx.fillStyle = this.color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
+    draw(canvas){
+        const _ctx = canvas.getContext("2d");
+        _ctx.fillStyle = this.color;
+        _ctx.fillRect(this.x, this.y, this.width, this.height);
     }
 
     //ランダムな大きさの長方形を作る

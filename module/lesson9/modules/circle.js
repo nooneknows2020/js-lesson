@@ -2,33 +2,37 @@ class Circle{
     // コンストラクタ
     constructor(x, y, r, color){
         this.type = 'CIRCLE';
-        this.x = x;
-        this.y = y;
-        this.r = r;
-        this.color = color;
+        // 図形のパラメータが指定されていなければ、初期値を以下のように設定する
+        this.x = x || 10;
+        this.y = y || 10;
+        this.r = r || 10;
+        this.color = color || "#333333";
     }
 
     // 図形の描画
-    draw(ctx){
-        ctx.fillStyle = this.color;
-        ctx.arc(this.x, this.y, this.r, 0, Math.PI*2, false);
-        ctx.fill();
+    draw(canvas){
+        const _ctx = canvas.getContext("2d");
+        _ctx.fillStyle = this.color;
+        _ctx.arc(this.x, this.y, this.r, 0, Math.PI*2, false);
+        _ctx.fill();
     }
 
-    //ランダムな大きさの円を作る
-    randomCircle(ctx){
+    //ランダムな位置、大きさ、色の図形を描画する
+    randomDraw(canvas){
         const color1 = random(0, 255);
         const color2 = random(0, 255);
         const color3 = random(0, 255);
         this.color = `rgb(${color1}, ${color2}, ${color3})`;
-        ctx.fillStyle = this.color;
+
+        const _ctx = canvas.getContext("2d");
+        _ctx.fillStyle = this.color;
     
         this.x = random(0, 480);
         this.y = random(0, 320);
         this.r = random(10, 100);
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.r, 0, Math.PI*2, false);
-        ctx.fill();
+        _ctx.beginPath();
+        _ctx.arc(this.x, this.y, this.r, 0, Math.PI*2, false);
+        _ctx.fill();
     }
     
     //図形の面積を求める

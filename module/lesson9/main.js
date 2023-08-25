@@ -28,6 +28,11 @@ canvas.init();
 // ボタンクリックで図形をキャンバスに描画する
 // Squareボタンの生成、document.bodyに追加
 const btnSauare = new Button("Square");
+// Circleボタンの生成、document.bodyに追加
+const btnCircle = new Button("Circle");
+// CLEARボタンの生成、document.bodyに追加
+
+// ボタンをクリックしたときの処理
 btnSauare.button.addEventListener('click', function(){
     // 図形を生成し、キャンバスに描画する
     // 図形の生成
@@ -37,9 +42,18 @@ btnSauare.button.addEventListener('click', function(){
     // 追加した図形を描画する
     // canvas.draw(square);
     canvas.randomDraw(square);
+});
+
+btnCircle.button.addEventListener('click', function(){
+    // 図形を生成し、キャンバスに描画する
+    // 図形の生成
+    const circle = new Circle();
+    // キャンバスに図形を追加する
+    canvas.add(circle);
+    // 追加した図形を描画する
+    // canvas.draw(circle);
+    canvas.randomDraw(circle);
 })
-// Circleボタンの生成、document.bodyに追加
-// CLEARボタンの生成、document.bodyに追加
 
 
 

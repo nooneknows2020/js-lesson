@@ -15,9 +15,9 @@
 </div>
 */
 import { Canvas } from './modules/canvas.js';
+import { Button } from './modules/button.js';
 import { Square } from './modules/square.js';
 import { Circle } from './modules/circle.js';
-import { Button } from './modules/button.js';
 
 
 // キャンバスの生成、document.bodyに追加
@@ -31,6 +31,7 @@ const btnSauare = new Button("Square");
 // Circleボタンの生成、document.bodyに追加
 const btnCircle = new Button("Circle");
 // CLEARボタンの生成、document.bodyに追加
+const btnClear = new Button("CLEAR");
 
 // ボタンをクリックしたときの処理
 btnSauare.button.addEventListener('click', function(){
@@ -40,7 +41,6 @@ btnSauare.button.addEventListener('click', function(){
     // キャンバスに図形を追加する
     canvas.add(square);
     // 追加した図形を描画する
-    // canvas.draw(square);
     canvas.randomDraw(square);
 });
 
@@ -51,10 +51,17 @@ btnCircle.button.addEventListener('click', function(){
     // キャンバスに図形を追加する
     canvas.add(circle);
     // 追加した図形を描画する
-    // canvas.draw(circle);
     canvas.randomDraw(circle);
 });
 
+btnClear.button.addEventListener('click', function(){
+    // キャンバスをリセット
+    canvas.reset();
+    // // 図形リストを全削除
+    // while(ulElem.firstChild){
+    //     ulElem.removeChild(ulElem.firstChild);
+    // }
+});
 
 // // ブラウザ表示用
 // const ulElem = document.getElementById('list');
@@ -73,12 +80,3 @@ btnCircle.button.addEventListener('click', function(){
 //     li.textContent = text;
 //     ulElem.appendChild(li); 
 // }
-
-// btnClear.addEventListener('click', function(){
-//     // キャンバスをリセット
-//     ctx.reset();
-//     // 図形リストを全削除
-//     while(ulElem.firstChild){
-//         ulElem.removeChild(ulElem.firstChild);
-//     }
-// })

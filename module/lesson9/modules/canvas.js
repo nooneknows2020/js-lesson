@@ -28,15 +28,26 @@ class Canvas{
     }
 
     draw(shape){
-        const ctx = this.canvas.getContext("2d");
-        // console.log(shape);
         shape.draw(this.canvas);
     }
 
     // ランダムな位置、大きさ、色の図形を描画する
     randomDraw(shape){
-        const ctx = this.canvas.getContext("2d");
         shape.randomDraw(this.canvas);
+    }
+
+    // キャンバスに描画されている図形をリセットする
+    reset(){
+        const ctx = this.canvas.getContext("2d");
+        // キャンバスをリセットする
+        ctx.reset();
+
+        // キャンバスに描画する図形を空にする
+        this.shapes = [];
+        console.log(this.shapes.length);
+
+        // キャンバスを初期状態に戻す
+        this.init();
     }
 }
 

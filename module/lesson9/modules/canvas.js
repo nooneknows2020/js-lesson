@@ -1,7 +1,7 @@
 class Canvas{
     // コンストラクタ
     constructor(width, height){
-        // canvaの生成
+        // canvasの生成
         this.canvas = document.createElement("canvas");
         document.body.appendChild(this.canvas);
         // キャンバスのサイズが指定されていなければ、幅480、高さ480を初期値とする
@@ -27,6 +27,7 @@ class Canvas{
         // console.log(this.shapes);
     }
 
+    // 図形を描画する
     draw(shape){
         shape.draw(this.canvas);
     }

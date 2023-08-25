@@ -53,19 +53,11 @@ btnCircle.button.addEventListener('click', function(){
     // 追加した図形を描画する
     // canvas.draw(circle);
     canvas.randomDraw(circle);
-})
-
+});
 
 
 // // ブラウザ表示用
 // const ulElem = document.getElementById('list');
-// const btnSquare = document.getElementById('btnSquare');
-// const btnCircle = document.getElementById('btnCircle');
-
-// // キャンバスの生成
-// const myCanvas = new Canvas(480, 320);
-// const ctx = myCanvas.ctx;
-// // console.log(ctx);
 
 
 // // 図形の情報をブラウザに表示
@@ -81,29 +73,6 @@ btnCircle.button.addEventListener('click', function(){
 //     li.textContent = text;
 //     ulElem.appendChild(li); 
 // }
-
-// // ボタンをクリックしたときの処理
-// btnSquare.addEventListener('click', function(){
-//     // 図形の生成
-//     // const square = new Square(10, 10, 50, 50, 'red');
-//     // square.draw(ctx);
-//     // ランダムな大きさの図形を生成
-//     const square = new Square();
-//     square.randomSquare(ctx);
-//     // console.log(square);
-
-//     displayAreaPerimeter(square);
-// })
-
-// btnCircle.addEventListener('click', function(){
-//     // const circle = new Circle(100, 100, 10, 'blue');
-//     // circle.draw(ctx);
-//     // ランダムな大きさの図形を生成
-//     const circle = new Circle();
-//     circle.randomCircle(ctx);
-
-//     displayAreaPerimeter(circle);
-// })
 
 // btnClear.addEventListener('click', function(){
 //     // キャンバスをリセット

@@ -3,12 +3,10 @@
 // ボタンクリックでランダムな大きさの図形をブラウザに表示
 // ブラウザの初期表示は以下
 /*
-<div>
-<canvas id="canvas"></canvas>
-</div>
-<button id="btnSquare">Square</button>
-<button id="btnCircle">Circle</button>
-<button id="btnClear">CLEAR</button>
+<canvas></canvas>
+<button>Square</button>
+<button>Circle</button>
+<button>CLEAR</button>
 <div>
 <h2>図形リスト</h2>
 <ul id="list"></ul>
@@ -46,6 +44,7 @@ btnSauare.button.addEventListener('click', function(){
     displayAreaPerimeter(square);
 });
 
+// ボタンをクリックしたときの処理
 btnCircle.button.addEventListener('click', function(){
     // 図形を生成し、キャンバスに描画する
     // 図形の生成
@@ -59,6 +58,7 @@ btnCircle.button.addEventListener('click', function(){
     displayAreaPerimeter(circle);
 });
 
+// ボタンをクリックしたときの処理
 btnClear.button.addEventListener('click', function(){
     // キャンバスをリセット
     canvas.reset();

@@ -24,7 +24,7 @@ class Canvas{
     // キャンバスに図形を追加する
     add(shape){
         this.shapes.push(shape);
-        console.log(this.shapes);
+        // console.log(this.shapes);
     }
 
     draw(shape){
@@ -45,11 +45,9 @@ class Canvas{
         const ctx = this.canvas.getContext("2d");
         // キャンバスをリセットする
         ctx.reset();
-
         // キャンバスに描画する図形を空にする
         this.shapes = [];
         // console.log(this.shapes.length);
-
         // キャンバスを初期状態に戻す
         this.init();
     }
